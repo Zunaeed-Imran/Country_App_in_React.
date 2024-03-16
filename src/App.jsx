@@ -37,7 +37,9 @@ function App() {
 
   return (
     <>
-    Hello from App
+      <h1>Country App</h1>
+      {isloading && <h2>Loding...</h2>}
+      {error && <h2>{error.message}</h2>}
     </>
   )
 }
