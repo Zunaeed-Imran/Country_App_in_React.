@@ -7,8 +7,8 @@ const Country2 = (props) => {
   const { name, flags, capital, population, area } = props.country;
 
 
-  const handleRemove = (name) => {
-    props.onRemoveCountry(name + ' Deleted');
+  const handleRemove = () => {
+    props.onRemoveCountry(name.common);
   };
 
 
