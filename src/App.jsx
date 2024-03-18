@@ -15,7 +15,7 @@ function App() {
 
 
   // making function for fetch data using asyn method.
-  const fetchData = async url => {
+  const fetchData = async (url) => {
     setIsloading(true);
     try {
       const response = await fetch(url);
@@ -42,7 +42,7 @@ function App() {
   const handleRemove = (name) => {
     const filter = filterCountries.filter((countries) =>
       countries.name.common !== name);
-    setCountries(filter)
+    setFilterCountries(filter);
   }
 
   // making function search data.
@@ -61,11 +61,11 @@ function App() {
     <>
       <h1>Country App</h1>
 
+      <Search onSearch={handleSearch} />
+
       {isloading && <h2>Loding...</h2>}
 
       {error && <h2>{error.message}</h2>}
-
-      <Search onSearch={handleSearch} />
       
       {countries && <Countries countries={filterCountries}
         onRemoveCountry={handleRemove} />}
