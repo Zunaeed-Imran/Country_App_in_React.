@@ -11,3 +11,11 @@
 ## My Fault in this project.
 - i was not give () in the return what is why can't display falg's
 - 
+
+### Today Done Task.
+- Reading react documentation about the Fragment.
+- Learning country app part by part.
+- Practicing displaying the data form API.
+- Practicing remove country form Display API.
+- Learning Searching Data from API.
+- 

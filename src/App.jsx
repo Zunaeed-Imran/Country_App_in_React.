@@ -10,6 +10,7 @@ function App() {
   const [isloading, setIsloading] = useState(true);
   const [error, setError] = useState(null);
   const [countries, setCountries] = useState([]);
+  const [filterCountries, setFilterCountries] = useState(countries);
 
   // making function for fetch data using asyn method.
   const fetchData = async url => {
@@ -18,6 +19,7 @@ function App() {
       const response = await fetch(url);
       const data = await response.json();
       setCountries(data);
+      setFilterCountries(data);
       setIsloading(false);
       setError(null);
     } catch (error) {
@@ -31,13 +33,22 @@ function App() {
     fetchData(url);
   }, []);
 
+
+  const handleRemove = (name) => {
+    const filter = filterCountries.filter((countries) =>
+      countries.name.common !== name);
+    setCountries(filter)
+  }
+
+
   // we are using props in coutries 
   return (
     <>
       <h1>Country App</h1>
       {isloading && <h2>Loding...</h2>}
       {error && <h2>{error.message}</h2>}
-      {countries && <Countries countries={countries} />}
+      {countries && <Countries countries={filterCountries}
+        onRemoveCountry={handleRemove} />}
     </>
   );
 }

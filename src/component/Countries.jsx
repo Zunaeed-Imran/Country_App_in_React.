@@ -15,7 +15,13 @@ const Countries = (props) => {
         {props.countries.map((country) => {
           const countryNew = { country, id: uuidv4() }
           
-          return <Country2 {...countryNew} key={countryNew.id}/>
+          return (
+            <Country2
+              {...countryNew}
+              key={countryNew.id}
+              onRemoveCountry={props.onRemoveCountry}
+            />
+          );
         })}
       </section>
     </>
