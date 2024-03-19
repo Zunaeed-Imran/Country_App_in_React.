@@ -1,3 +1,5 @@
+// form this page we make the search bar.
+
 import React, { useEffect, useState } from 'react';
 
 const Search = (props) => {
