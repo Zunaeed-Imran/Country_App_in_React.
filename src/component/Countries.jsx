@@ -1,4 +1,4 @@
-// Form this page we display the data.
+// Form this page passing data.
 
 import React from 'react'
 
