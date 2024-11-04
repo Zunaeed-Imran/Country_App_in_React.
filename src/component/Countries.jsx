@@ -18,7 +18,6 @@ const Countries = (props) => {
             <Country2
               {...countryNew}
               key={countryNew.id}
-              onRemoveCountry={props.onRemoveCountry}
             />
           );
         })}
@@ -32,5 +31,4 @@ export default Countries;
 Countries.propTypes = {
   props: PropTypes.string,
   countries: PropTypes.string,
-  onRemoveCountry: PropTypes.string,
 };
