@@ -1,5 +1,7 @@
 // ./component/Countries.js
 
+// prop type define.
+import PropTypes from 'prop-types';
 
 function Countries({ countryData }) {
   return (
@@ -12,3 +14,7 @@ function Countries({ countryData }) {
 }
 
 export default Countries;
+
+Countries.propTypes = {
+  countryData: PropTypes.string,
+};
