@@ -1,34 +1,14 @@
-// Form this page passing data.
-import { v4 as uuidv4 } from 'uuid';
-import Country2 from './Country2';
-
-// prop type define.
-import PropTypes from 'prop-types';
+// ./component/Countries.js
 
 
-
-const Countries = (props) => {
+function Countries({ countryData }) {
   return (
-    <>
-      <section>
-        {props.countries.map((country) => {
-          const countryNew = { country, id: uuidv4() }
-          
-          return (
-            <Country2
-              {...countryNew}
-              key={countryNew.id}
-            />
-          );
-        })}
-      </section>
-    </>
-  )
+    <div>
+      {countryData.map((country, index) => (
+        <p key={index}>{country.name.common}</p>
+      ))}
+    </div>
+  );
 }
 
 export default Countries;
-
-Countries.propTypes = {
-  props: PropTypes.string,
-  countries: PropTypes.string,
-};
