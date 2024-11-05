@@ -1,0 +1,24 @@
+
+const appUrl = "https://restcountries.com/v3.1/all";
+
+
+const [country setCountry] = useState([]);
+
+const fetchData = (appUrl) => {
+  const response = await fetch(appUrl);
+  const data = await response.json();
+  setCountry(data);
+}
+
+useEffect(() => {
+  fetchData(appUrl);
+}, [])
+
+import PropTypes from 'prop-types';
+Country.propTypes = {
+  data: PropTypes.string,
+}
+
+{country.map((country, index) => {
+  <p key={index}>{country.name.common}</p>
+})}
