@@ -20,11 +20,7 @@ function App() {
   })
 
 
-  return (
-    <div>
-      {<Countries countrys={country} />}
-    </div>
-  )
+  return <div>{<Countries countrys={country} />}</div>;
 }
 
 export default App
