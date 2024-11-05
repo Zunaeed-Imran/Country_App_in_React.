@@ -3,10 +3,10 @@
 // prop type define.
 import PropTypes from 'prop-types';
 
-function Countries({ countryData }) {
+function Countries({ countrys }) {
   return (
     <div>
-      {countryData.map((country, index) => (
+      {countrys.map((country, index) => (
         <p key={index}>{country.name.common}</p>
       ))}
     </div>
@@ -16,5 +16,5 @@ function Countries({ countryData }) {
 export default Countries;
 
 Countries.propTypes = {
-  countryData: PropTypes.arrayOf,
+  countrys: PropTypes.arrayOf,
 };

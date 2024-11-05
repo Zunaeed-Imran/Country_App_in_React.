@@ -22,7 +22,7 @@ function App() {
 
   return (
     <div>
-      {<Countries country={country} />}
+      {<Countries countrys={country} />}
     </div>
   )
 }
