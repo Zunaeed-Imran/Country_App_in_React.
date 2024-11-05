@@ -3,6 +3,7 @@ import Countries from "./component/Countries";
 
 const url = 'https://restcountries.com/v3.1/all';
 
+import "./App.css";
 
 
 function App() {
