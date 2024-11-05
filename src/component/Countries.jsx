@@ -16,5 +16,5 @@ function Countries({ countryData }) {
 export default Countries;
 
 Countries.propTypes = {
-  countryData: PropTypes.array,
+  countryData: PropTypes.arrayOf,
 };
