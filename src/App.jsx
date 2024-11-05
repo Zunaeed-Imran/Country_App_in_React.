@@ -4,6 +4,8 @@ import Countries from './component/Countries';
 
 const appUrl = 'https://restcountries.com/v3.1/all';
 
+import './Countries.css'; // Optional for styling the pagination
+
 
 function App() {
 
