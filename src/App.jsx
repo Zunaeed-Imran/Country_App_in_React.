@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Countries from "./component/Countries";
 
 const url = 'https://restcountries.com/v3.1/all';
 
@@ -14,9 +15,14 @@ function App() {
     setCountry(data);
   }
 
+  useEffect(() => {
+    fetchAPi(url);
+  })
+
+
   return (
     <div>
-      
+      {<Countries country={country} />}
     </div>
   )
 }
