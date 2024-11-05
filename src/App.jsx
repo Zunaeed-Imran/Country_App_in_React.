@@ -9,8 +9,8 @@ function App() {
   const [country, setCountry] = useState();
 
   const fetchAPi = (url) => {
-    const response = await country;
-    const data = await response.json();
+    const response = await fetch(url);
+    const data = await response.json(url);
     setCountry(data);
   }
 
