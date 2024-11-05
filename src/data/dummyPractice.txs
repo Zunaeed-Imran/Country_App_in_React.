@@ -4,7 +4,7 @@ const appUrl = "https://restcountries.com/v3.1/all";
 
 const [country setCountry] = useState([]);
 
-const fetchData = (appUrl) => {
+const fetchData = async (appUrl) => {
   const response = await fetch(appUrl);
   const data = await response.json();
   setCountry(data);
