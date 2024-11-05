@@ -1,12 +1,12 @@
 import { useState } from "react";
 
+const url = 'https://restcountries.com/v3.1/all';
 
 function App() {
 
-  const flagName = 'https://restcountries.com/v3.1/all';
-
   const [country, setCountry] = useState([]);
 
+  const fetchingData = await fetch(url)
 
   return (
     <div>
