@@ -9,7 +9,7 @@ import ReactPaginate from 'react-paginate';
 
 
 function Countries({ countrys }) {
-  const itemsPerPage = 10; // Number of items per page
+  const itemsPerPage = 6; // Number of items per page
 
   // States for pagination
   const [currentItems, setCurrentItems] = useState([]);
