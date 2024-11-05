@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 function Countries({ countrys }) {
   return (
     <div>
-      {countrys.map((country, index) => (
+      {countrys?.map((country, index) => (
         <p key={index}>{country.name.common}</p>
       ))}
     </div>
