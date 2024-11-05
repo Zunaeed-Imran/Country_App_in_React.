@@ -23,9 +23,9 @@ function App() {
   return (
     <div>
       <h1> Hello country app </h1>
-      <p>{<Countries countrys={country} />}</p>
+      <p>{<Countries countryData={country}/>}</p>
     </div>
-  );
+  )
 }
 
 export default App
