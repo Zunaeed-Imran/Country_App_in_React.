@@ -9,7 +9,7 @@ function App() {
 
   const [country, setCountry] = useState();
 
-  const fetchAPi = (url) => {
+  const fetchAPi = async (url) => {
     const response = await fetch(url);
     const data = await response.json(url);
     setCountry(data);
