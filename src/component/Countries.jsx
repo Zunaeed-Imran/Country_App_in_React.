@@ -1,6 +1,9 @@
 // ./component/Countries.js
 
+// prop validation.
 import PropTypes from 'prop-types';
+
+// for pagination
 import { useState, useEffect } from 'react';
 import ReactPaginate from 'react-paginate';
 
