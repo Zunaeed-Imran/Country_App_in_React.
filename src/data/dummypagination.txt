@@ -10,4 +10,9 @@ useEffect(() => {
     setCount(Math.ceil(countrys.length / Showitem));
     setCurrent(countrys.slice(0, Showitem));
   }
-}, [countrys])
+}, [countrys]);
+
+const handlePageClick = event => {
+  const newOffset = event.selected * Showitem;
+  setCurrent(countrys.slice(newOffset, newOffset + Showitem));
+};
