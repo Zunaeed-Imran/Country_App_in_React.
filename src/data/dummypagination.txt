@@ -6,8 +6,8 @@ const [current, setCurrent] = useState([]);
 const [count, setCount] = useState(0);
 
 useEffect(() => {
-  if (countrys && countrys.length > 0){
+  if(countrys && countrys.length > 0){
     setCount(Math.ceil(countrys.length / Showitem));
-    setCurrentItems(countrys.slice(0, Showitem));
+    setCurrent(countrys.slice(0, Showitem));
   }
-}, [countrys]);
+}, [countrys])
