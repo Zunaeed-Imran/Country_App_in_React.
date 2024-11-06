@@ -16,3 +16,9 @@ const handlePageClick = event => {
   const newOffset = event.selected * Showitem;
   setCurrent(countrys.slice(newOffset, newOffset + Showitem));
 };
+
+{current.length > 0 ? (
+  current.map((country, index) => (
+    <p key={index}>{country.name.common}</p>
+  ))
+)}
