@@ -1,5 +1,6 @@
 # React Country App.
 
+# i also practice paginationj in this repo in the pagination branch.
 
 ## Setp of making Process Country App.
 1. Basic Structure Setup
